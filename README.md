@@ -8,7 +8,8 @@ A reproducible customer analytics portfolio project that ranks **historical 90-d
 
 - Reproducible local pipeline: implemented.
 - Time-aware holdout and aggregate-only Streamlit dashboard: implemented.
-- Publication target: public `rjha20/customer-churn-intelligence` repository with a Streamlit Community Cloud app. The exact URLs are added here after publication.
+- Public repository: [rjha20/customer-churn-intelligence](https://github.com/rjha20/customer-churn-intelligence).
+- Live Streamlit dashboard: [Customer Retention Intelligence](https://customer-churn-intelligence-fqhiky64jfjrosohfmmxme.streamlit.app/), deployed with Python 3.12.
 
 ## Dashboard
 
@@ -94,7 +95,7 @@ customer-churn-intelligence/
 
 ## Deployment
 
-The app is designed for Streamlit Community Cloud, with `dashboard/app.py` as the entry point. It has no credentials, database, live transaction feed, scoring API, or write endpoint. After publication, the exact public repo and live app URL will appear below. See [`docs/deployment.md`](docs/deployment.md).
+The app is deployed to Streamlit Community Cloud from [`rjha20/customer-churn-intelligence`](https://github.com/rjha20/customer-churn-intelligence), branch `main`, entry point `dashboard/app.py`. Open the [live dashboard](https://customer-churn-intelligence-fqhiky64jfjrosohfmmxme.streamlit.app/). It has no credentials, database, live transaction feed, scoring API, or write endpoint. See [`docs/deployment.md`](docs/deployment.md).
 
 ## Model and data governance
 

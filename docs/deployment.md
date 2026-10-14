@@ -1,8 +1,8 @@
 # Deployment runbook
 
-## Planned hosted app
+## Live hosted app
 
-The target is Streamlit Community Cloud from the `rjha20/customer-churn-intelligence` GitHub repository, branch `main`, entry point `dashboard/app.py`. The app has no API keys, database, or write endpoint. It loads only reviewed aggregate CSV/JSON files committed under `data/processed/public/`. Add the live URL here after deployment.
+The [public dashboard](https://customer-churn-intelligence-fqhiky64jfjrosohfmmxme.streamlit.app/) is deployed from the [rjha20/customer-churn-intelligence](https://github.com/rjha20/customer-churn-intelligence) GitHub repository, branch `main`, entry point `dashboard/app.py`, with Python 3.12. The app has no API keys, database, or write endpoint. It loads only reviewed aggregate CSV/JSON files committed under `data/processed/public/`.
 
 ## Deploy or reconnect
 
