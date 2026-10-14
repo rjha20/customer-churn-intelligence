@@ -1,0 +1,99 @@
+{
+  "project": "Customer Retention Intelligence",
+  "prediction_contract": {
+    "unit": "customer-month episode with at least one purchase in the prior 180 days",
+    "snapshot": "first day of each month",
+    "target": "no positive-value purchase during the following 90 days",
+    "features": "purchase activity strictly before the snapshot; 180-day window",
+    "target_is_inactivity_proxy": true
+  },
+  "source": {
+    "name": "UCI Online Retail II",
+    "url": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "license": "CC BY 4.0; attribution required",
+    "source_rows": 1067371,
+    "usable_purchase_rows": 805549,
+    "excluded_rows": 261822,
+    "cancelled_lines_excluded": 19494,
+    "rows_missing_customer_id": 243007,
+    "purchase_invoices": 36969,
+    "identified_customers": 5878,
+    "first_purchase_date": "2009-12-01",
+    "last_purchase_date": "2011-12-09",
+    "countries": 41
+  },
+  "snapshot_rows": 48079,
+  "snapshot_count": 16,
+  "time_split": {
+    "train_before": "2010-10-01",
+    "validation_from": "2010-12-01",
+    "validation_before": "2011-02-01",
+    "locked_test_from": "2011-04-01",
+    "label_maturity_gap_snapshots": [
+      "2010-10",
+      "2010-11",
+      "2011-02",
+      "2011-03"
+    ],
+    "train_episodes": 11079,
+    "validation_episodes": 6894,
+    "test_episodes": 17279,
+    "test_months": [
+      "2011-04",
+      "2011-05",
+      "2011-06",
+      "2011-07",
+      "2011-08",
+      "2011-09"
+    ]
+  },
+  "model_selection": {
+    "selected_model": "regularized_logistic_regression",
+    "selection_metric": "validation average precision",
+    "validation_results": {
+      "regularized_logistic_regression": {
+        "average_precision": 0.8228875838671069,
+        "prevalence_baseline": 0.6219901363504496
+      },
+      "hist_gradient_boosting": {
+        "average_precision": 0.8155245574662358,
+        "prevalence_baseline": 0.6219901363504496
+      }
+    },
+    "final_fit": "selected pipeline refit on train + validation; evaluated once on later test months"
+  },
+  "locked_temporal_test": {
+    "model": {
+      "rows": 17279,
+      "inactivity_prevalence": 0.4859077492910469,
+      "average_precision": 0.7155872909627486,
+      "roc_auc": 0.7520793045282924,
+      "brier_score": 0.203557643215696,
+      "log_loss": 0.5920731147556584,
+      "precision_at_10pct": 0.8125,
+      "recall_at_10pct": 0.1672224868985231,
+      "lift_at_10pct": 1.6721280967127203,
+      "customers_reviewed_at_10pct": 1728
+    },
+    "recency_only_ranker": {
+      "rows": 17279,
+      "inactivity_prevalence": 0.4859077492910469,
+      "average_precision": 0.6518166944879932,
+      "roc_auc": 0.6765116797870491,
+      "precision_at_10pct": 0.7378472222222222,
+      "recall_at_10pct": 0.15185802763220582,
+      "lift_at_10pct": 1.5184923955190304,
+      "customers_reviewed_at_10pct": 1728
+    },
+    "prevalence_baseline_average_precision": 0.4859077492910469,
+    "constant_prevalence_brier_score": 0.24980140846995605,
+    "brier_skill_vs_constant_prevalence": 0.18512211575389037,
+    "brier_vs_constant_prevalence": "better"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  },
+  "important_limit": "A ranking predicts historical 90-day purchase inactivity, not response to a retention offer or causal uplift."
+}

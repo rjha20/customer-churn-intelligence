@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
+.streamlit/secrets.toml
+
+# Raw source transactions and local row-level working data never enter Git.
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/public/
+data/processed/public/*
+!data/processed/public/.gitkeep
+!data/processed/public/metrics.json
+!data/processed/public/monthly_performance.csv
+!data/processed/public/segment_performance.csv
+!data/processed/public/retention_cohorts.csv
+!data/processed/public/risk_deciles.csv
+!data/processed/public/feature_summary.csv
+!data/processed/public/country_summary.csv
+
+# Prior offline Telco exploration contains customer-level SQLite data and is retained locally only.
+output/
+slides/
+sql/*
+!sql/
+!sql/retention_review.sql
+dashboard/index.html
+src/build_analysis.py
+src/build_dashboard.py
+src/model_churn.py
+.codex-build/
+.codex-finalizer/
+.chart-data-*/

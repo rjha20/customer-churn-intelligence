@@ -1,0 +1,15 @@
+feature,coefficient,direction,absolute_coefficient
+orders_90d,-1.0041262487868161,Higher values align with lower score,1.0041262487868161
+orders_180d,-0.5948275183903435,Higher values align with lower score,0.5948275183903435
+order_frequency_ratio_90d,0.3563832864779604,Higher values align with higher score,0.3563832864779604
+products_180d,-0.3333990244707888,Higher values align with lower score,0.3333990244707888
+days_since_last_purchase,0.16604194555640045,Higher values align with higher score,0.16604194555640045
+revenue_180d,0.11894936398240544,Higher values align with higher score,0.11894936398240544
+units_180d,0.10771118980058488,Higher values align with higher score,0.10771118980058488
+avg_invoice_value_180d,-0.09473927634782164,Higher values align with lower score,0.09473927634782164
+revenue_90d,-0.09341284886605272,Higher values align with lower score,0.09341284886605272
+mean_gap_days_180d,-0.08696260468520796,Higher values align with lower score,0.08696260468520796
+customer_age_days,-0.06568665994880168,Higher values align with lower score,0.06568665994880168
+orders_30d,0.06449015227946035,Higher values align with higher score,0.06449015227946035
+revenue_30d,-0.062081998248925144,Higher values align with lower score,0.062081998248925144
+revenue_ratio_90d,0.0018039624718111573,Higher values align with higher score,0.0018039624718111573

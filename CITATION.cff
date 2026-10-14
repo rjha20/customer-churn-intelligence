@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the UCI source dataset separately as listed in the README."
+title: "Customer Retention Intelligence"
+authors:
+  - name: "rjha20"
+type: software
+license: MIT
+repository-code: "https://github.com/rjha20/customer-churn-intelligence"
