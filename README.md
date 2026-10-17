@@ -117,3 +117,7 @@ Replace generic metric references with the actual values in `reports/model_evalu
 ## Scope limits
 
 The dataset is old and comes from one giftware/wholesale-heavy retailer. It does not include a verified churn label, recent customer behavior, offer/contact history, intervention outcome, cost/margin truth, current market conditions, or Amex data. Hosting this app does not turn the model into a production customer-retention system. Any business pilot would require current approved data, outcome maturity, monitoring, governance, and a randomized holdout experiment.
+
+## Model walkthrough
+
+See [feature design, model selection and metric interpretation](docs/model_walkthrough.md) for an explanation of the temporal benchmark and its reproduction.
